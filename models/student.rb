@@ -12,7 +12,7 @@ class Student
     @second_name = options['second_name']
     # @house = options['house']
     @age = options['age'].to_i
-    @house_id = options['house_id']
+    @house_id = options['house_id'].to_i
   end
 
   def save()
@@ -52,6 +52,8 @@ class Student
     sql = "DELETE FROM students"
     SqlRunner.run( sql )
   end
+
+  def student_house
 
 
 end
