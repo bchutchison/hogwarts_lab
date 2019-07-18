@@ -53,7 +53,7 @@ class Student
     SqlRunner.run( sql )
   end
 
-  def student_house()
+  def house()
     sql = "SELECT * FROM houses
     WHERE houses.id = $1"
     values = [@house_id]
