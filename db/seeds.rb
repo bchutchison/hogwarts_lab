@@ -21,6 +21,5 @@ student1 = Student.new({
   student2.save()
 
 
-
   binding.pry
   nil
