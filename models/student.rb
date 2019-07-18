@@ -53,7 +53,14 @@ class Student
     SqlRunner.run( sql )
   end
 
-  def student_house
+  def student_house()
+    sql = "SELECT * FROM houses
+    WHERE houses.id = $1"
+    values = [@house_id]
+    houses = SqlRunner.run(sql, values)
+    house = House.map_item(houses)
+    return house
+  end
 
 
 end

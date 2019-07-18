@@ -47,6 +47,9 @@ class House
     SqlRunner.run( sql )
   end
 
-
+def self.map_item(house_data)
+  result = house_data.map{|house| House.new(house)}
+  return result.first
+end
 
 end
